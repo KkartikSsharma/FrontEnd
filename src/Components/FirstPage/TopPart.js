@@ -4,7 +4,7 @@ import LowerPart from './LowerPart'
 export default class TopPart extends Component {
     render() {
         return (
-            <div style={{ backgroundColor: "#00bfa5", height: "60vh",color:"white",textAlign:"left" }}>
+            <div style={{ backgroundColor: "#00bfa5", height: "70vh",color:"white",textAlign:"left" }}>
                 <div style={{ textAlign: "left", padding: "2em", paddingTop: "4em" }}>
                     <i className="fa fa-chevron-left"></i>
                 </div>

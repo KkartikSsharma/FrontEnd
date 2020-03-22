@@ -12,3 +12,15 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.optClass
+{
+  text-align:center !important;
+  border:none;
+  border-radius: 100%;
+  background: lightgrey;
+  outline: none;
+  height: 40px;
+  width: 40px;
+  
+}
