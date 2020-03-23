@@ -3,8 +3,9 @@ import NumberFormat from 'react-number-format';
 import { TextField } from '@material-ui/core';
 import '../FirstPage/css.css'
 import OtpInput from 'react-otp-input';
+import { withRouter } from 'react-router';
 
-export default class LowerPartSecond extends Component {
+class LowerPartSecond extends Component {
 
     handleKeyOne() {
         this.refs.two.focus();
@@ -17,6 +18,9 @@ export default class LowerPartSecond extends Component {
     }
     handleKeyFour() {
         this.refs.enter.focus();
+    }
+    clickHandler(){
+        this.props.history.push('/thirdPage')
     }
     render() {
         return (
@@ -34,9 +38,11 @@ export default class LowerPartSecond extends Component {
                     <input type="text" className="optClass" maxLength="1" ref="four" onChange={() => this.handleKeyFour()} />
                 </div>
                 <div ref="enter" style={{ bottom: "0", textAlign: "right", paddingRight: "1em", fontSize: "70px", marginTop: "2em", color: "#f50057" }}>
-                    <i class="fa fa-arrow-circle-right" ></i>
+                    <i class="fa fa-arrow-circle-right" onClick={()=>this.clickHandler()}></i>
                 </div>
             </div>
         )
     }
 }
+
+export default  withRouter(LowerPartSecond);
